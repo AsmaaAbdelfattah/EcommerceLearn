@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--AddressVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="address" id="Y6W-OH-hqX" customClass="AddressVC" customModule="ECommerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fme-06-74R">
+                                <rect key="frame" x="0.0" y="59" width="393" height="510"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="RMD-TW-xNO">
+                                <rect key="frame" x="20" y="599" width="353" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ma0-u5-sLq">
+                                        <rect key="frame" x="0.0" y="0.0" width="161.66666666666666" height="45"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Start Track">
+                                            <color key="baseForegroundColor" red="0.01909541897" green="0.36283588410000001" blue="0.58755284549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="startTrack:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="O1x-ig-ZGT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c65-1u-qnN">
+                                        <rect key="frame" x="191.66666666666663" y="0.0" width="161.33333333333337" height="45"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Stop track">
+                                            <color key="baseForegroundColor" red="0.01909541897" green="0.36283588410000001" blue="0.58755284549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="stopTrack:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fvQ-Fs-8ek"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="0YJ-L3-2Mb"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="RMD-TW-xNO" secondAttribute="trailing" constant="20" id="4Mv-6J-UCn"/>
+                            <constraint firstItem="RMD-TW-xNO" firstAttribute="top" secondItem="fme-06-74R" secondAttribute="bottom" constant="30" id="DXk-fQ-aC4"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fme-06-74R" secondAttribute="trailing" id="DzM-nr-VhL"/>
+                            <constraint firstItem="RMD-TW-xNO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="TWa-Vm-pcI"/>
+                            <constraint firstItem="fme-06-74R" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="UpT-Ic-8l9"/>
+                            <constraint firstItem="fme-06-74R" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Uy2-8F-yYT"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="RMD-TW-xNO" secondAttribute="bottom" constant="174" id="YKj-6l-HE7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapKit" destination="fme-06-74R" id="N7C-kn-PcY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75.572519083969468" y="4.9295774647887329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

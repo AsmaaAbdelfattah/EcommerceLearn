@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AdsCollectionReusableView" id="U6b-Vx-4bR" customClass="AdsCollectionReusableView" customModule="ECommerce" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="193"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Sgv-eC-tBc">
+                    <rect key="frame" x="0.0" y="27" width="320" height="166"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eDz-P8-KtV">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ads" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Znx-Jl-2nh">
+                    <rect key="frame" x="26" y="2" width="31.666666666666671" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="HaY-ks-I20">
+                    <rect key="frame" x="16" y="159" width="288" height="26"/>
+                </pageControl>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstItem="Sgv-eC-tBc" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="2mU-AY-OIh"/>
+                <constraint firstItem="HaY-ks-I20" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="16" id="4eJ-gd-Q2M"/>
+                <constraint firstItem="Sgv-eC-tBc" firstAttribute="top" secondItem="Znx-Jl-2nh" secondAttribute="bottom" constant="4" id="HJl-DK-4gx"/>
+                <constraint firstItem="Znx-Jl-2nh" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leadingMargin" constant="10" id="HrS-Y7-Clb"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Znx-Jl-2nh" secondAttribute="trailing" constant="4" id="JOf-6R-yuw"/>
+                <constraint firstItem="Znx-Jl-2nh" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="2" id="Xwm-55-sQi"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="HaY-ks-I20" secondAttribute="trailing" constant="16" id="pMS-Ko-ahQ"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="Sgv-eC-tBc" secondAttribute="trailing" id="tp3-w8-E3p"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="HaY-ks-I20" secondAttribute="bottom" constant="8" id="xQs-ht-Pf5"/>
+                <constraint firstItem="Sgv-eC-tBc" firstAttribute="bottom" secondItem="VXr-Tz-HHm" secondAttribute="bottom" id="zd4-PC-roI"/>
+            </constraints>
+            <connections>
+                <outlet property="ADSCollection" destination="Sgv-eC-tBc" id="Cbq-lN-C1s"/>
+                <outlet property="pageControl" destination="HaY-ks-I20" id="SDb-70-wvX"/>
+            </connections>
+            <point key="canvasLocation" x="-21.374045801526716" y="70.774647887323951"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
